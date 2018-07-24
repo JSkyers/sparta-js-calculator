@@ -1,9 +1,9 @@
-var calc = prompt("Which calculator would you like to use? Basic or Advanced?");
+var calc = prompt("Which calculator would you like to use? Basic (1) or Advanced? (2)");
 var basic = false;
 var adva = false;
 var answer = 0;
 
-if(calc == "basic") {
+if(calc == "1") {
   var num1 = prompt("Please enter your first number");
   basic = true;
     if(num1 => 0 && basic == true) {
@@ -11,41 +11,41 @@ if(calc == "basic") {
         num1 = parseInt(num1)
     }
     if (num2 => 0 && basic == true) {
-      var mode = prompt("What would you like to do? add, subtract, multiply or divide?");
+      var mode = prompt("What would you like to do? add (1), subtract (2), multiply (3) or divide? (4)");
         num2 = parseInt(num2)
     }
-    if (mode == "add" && basic == true) {
+    if (mode == "1" && basic == true) {
       answer = num1 + num2;
       alert(answer);
     }
-    if (mode == "subtract" && basic == true) {
+    if (mode == "2" && basic == true) {
       answer = num1 - num2;
       alert(answer);
     }
-    if (mode == "multiply" && basic == true) {
+    if (mode == "3" && basic == true) {
       answer = num1 * num2;
       alert(answer);
     }
-    if (mode == "divide" && basic == true) {
+    if (mode == "4" && basic == true) {
       answer = num1 / num2;
       alert(answer);
     }
     else {
-      alert("That is not a valid number");
+      location.reload();
     }
 }
-  else if (calc == "advanced") {
+  else if (calc == "2") {
   var num1 = prompt("Please enter your first number")
   adva = true;
     if(num1 => 0 && adva == true) {
-      var mode = prompt("What would you like? power or square");
+      var mode = prompt("What would you like? power (1) or square (2)");
        num1 = parseInt(num1)
     }
-    if (mode == "power" && adva == true) {
+    if (mode == "1" && adva == true) {
        var num2 = prompt("Please enter your second number");
        num2 = parseInt(num2)
     }
-    else if (mode == "square" && adva == true) {
+    else if (mode == "2" && adva == true) {
       answer = Math.sqrt(num1);
       alert(answer);
     }
